@@ -1,14 +1,35 @@
-let slideIndex = 0;
-showSlides();
+let slideIndex = [1, 1, 1, 1]; // Índices de slides para cada slideshow
+let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]; // Classes dos slides para cada slideshow
 
-function showSlides() {
+// Mostrar o primeiro slide de cada slideshow inicialmente
+for (let i = 0; i < slideId.length; i++) {
+  showSlides(1, i);
+  autoSlide(i); // Inicia o slideshow automático para cada conjunto
+}
+
+// Função para avançar os slides automaticamente
+function autoSlide(no) {
+  setInterval(function() {
+    plusSlides(1, no); // Avança para o próximo slide
+  }, 5000); // Muda o slide a cada 3 segundos (3000 milissegundos)
+}
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  let x = document.getElementsByClassName(slideId[no]); // Pega todos os slides do grupo
+
+  if (n > x.length) {slideIndex[no] = 1} // Se for o último slide, vai para o primeiro
+  if (n < 1) {slideIndex[no] = x.length} // Se for o primeiro slide e avançar, vai para o último
+
+  // Esconde todos os slides
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+
+  // Mostra o slide atual
+  x[slideIndex[no] - 1].style.display = "block";
 }

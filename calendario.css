@@ -1,16 +1,12 @@
 @media screen and (max-width: 600px) {
-    .calendas {
-        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr .5fr;
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 600px) {
     body {
+        grid-template-rows: 15vh 10vh 100vh;
         grid-template-columns: 1fr;
     }
 }
-
+::-webkit-scrollbar {
+    width: 0px;
+}
 body {
     margin: 0;
     display: grid;
@@ -18,14 +14,13 @@ body {
     grid-template-rows: 15vh 5vh 80vh;
     width: 100%;
     font-family: 'Josefin Sans';
+    background-color: rgb(187, 136, 43);
 }
-
 h1 {
     margin: 0;
 }
-
 header {
-    background-color: #4F2C80;
+    background-color: #EEAD2D;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -33,7 +28,6 @@ header {
     justify-items: center;
     align-items: center;
 }
-
 header > div {
     display: flex;
     justify-content: center;
@@ -42,7 +36,6 @@ header > div {
     width: 40%;
     grid-column: 2.5;
 }
-
 .logo {
     font-weight: bolder;
     color: #F2EFE9;
@@ -50,21 +43,17 @@ header > div {
     font-family: 'Josefin Sans';
     font-size: 65px;
 }
-
 .wario {
     grid-column: 2;
     grid-row: 1;
 }
-
 .logo > a{
     text-decoration: none;
     color: #F2EFE9;
 }
-
 .logo > a:link{
     color: #F2EFE9;
 }
-
 .logo2 {
     font-weight: 900;
     font-size: 100%;
@@ -74,15 +63,13 @@ header > div {
     display: flex;
     flex-direction: column;
 }
-
 .logo2 > a {
     color: white;
     text-decoration: none;
     padding: 1%;
 }
-
 nav {
-    background-color: #E57C4A;
+    background-color: #000000;
     height: 5vh;
     display: flex;
     justify-content: center;
@@ -90,20 +77,17 @@ nav {
     font-family: 'Josefin Sans';
     color: #F2EFE9;
     font-size: 100%;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
 }
-
 nav > a {
     margin: 0 10px;
     font-weight: bold;
     color: white;
     text-decoration: none;
-    height: 100%;
     padding: 0px 0.5%;
     transition: background-color .2s ease-in;
     border-radius: 0px 0px 20px 20px;
 }
-
 main {
     background-color: white;
     height: 80vh;
@@ -111,92 +95,292 @@ main {
     align-items: center;
     justify-content: center;
 }
-
 .painel {
-    background-color: transparent;   
+    background-color: transparent;
     border: 0px;
     width: 100px;
     height: 70%;
 }
-
 .painel > i {
     font-size: 50px;
     color:#F2EFE9;
 }
-
 .painel > i:hover, .logo2 > a:hover{
     color: #E57C4A;
 }
-
 nav > a:hover {
-    background-color: #4F2C80;
+    background-color: #EEAD2D;
     border-radius: 0px 0px 20px 20px;
 }
-
-.calendas{
+.jornalMenu{
     display: grid;
-    justify-content: center;
-    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    flex-direction: row;
     align-items: center;
-    grid-template-columns: .5fr .5fr .5fr .5fr .5fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr .5fr;
-
+    justify-content: center;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-
-.meses{
-    background-color: rgb(255, 248, 183);
+.textpoto{
+    align-self: center;
     justify-content: center;
-    border: black 1px solid;
-    font-size: 15px;
-    width: max-content;
-    margin: 10px;
-    display: grid;
-    grid-template-rows: 4vh 4vh 4vh 4vh 4vh 4vh 4vh;
-    grid-template-columns: 4vh 4vh 4vh 4vh 4vh 4vh 4vh;
-    align-items: center;
     text-align: center;
-    text-wrap: wrap;
+    margin: 0px 0px !important;
+    overflow-y: scroll;
+    height: 80%;
 }
-
-.meses > h2{
-    margin-top: 30px;
+@media screen and (max-width: 600px) {
+    .jornalMenu{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
-
-.mes{
+@media screen and (max-width: 600px){
+    .photo{
+        grid-column: span 3;
+        margin: 0;
+    }
+}
+.photo{
     display: flex;
-    text-align: center;
-    grid-column: span 7;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(100, 100, 100);
-    color: white;
-    margin: 0px;
-    width: 100%;
-    height: fit-content;
-    margin-top: 5px;
-}
-
-.legenda{
-    margin: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit 1fr);
-    grid-row: span 7;
-    font-size: 30px; 
+    justify-content: center;
     height: 100%;
-    text-align: center;
+    align-items: center;
 }
-
-.legenda > p{
-    margin: 6px;
-    border-bottom: black 1px solid;
-    font-size: 13px;
-    text-align: center;
+.photo > img{
+    width: 100%;
+    height: 740;
 }
-
-.cabca{
-    height: fit-content;
+@media screen and (max-width: 600px) {
+    .photo > img {
+        width: 350px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 600px) {
+    a > img {
+        width: 300px;
+        height: 150px;
+        grid-column: span 2;
+    }
+    .slideshow-container {
+        grid-row: 3;
+        height: 100%;
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        display: none;
+    }
+    .events {
+        display: flex;
+        align-content: center;
+    }
+    .mySlides > img {
+        height: 140px;
+        width: 300px;
+        align-self: center;
+    }
+    .events {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .titleEvents {
+        width: 300px;
+        height: 200px;
+    }
+}
+.mySlides {
+    height: 100%;
+    width: 100%;
+}
+.textpoto {
+    width: 100%;
+    height: 100%;
+}
+.textpoto > h2{
+        text-align: left;
+        justify-self: center;
+        text-wrap: wrap;
+        min-width: fit-content;
+        width: min-content;
+}
+.textpoto > p{
+    text-wrap: wrap;
+    text-align: left;
+    margin: 10px;
+    word-wrap: break-word;
+    justify-content: center;
+}
+.events{
     justify-content: center;
     text-align: center;
-    grid-column: span 2;
+    align-content: center;
+}
+.titleEvents {
+    height: 100%;
+    align-content: center;
+}
+.contentEvents{
+    min-width: fit-content;
+}
+.pastEvents{
+    grid-column: span 3;
+    display: grid;
+    text-align: center;
+    margin: 5px;
+    max-height: fit-content;
+    height: 350px;
+}
+.pastEvents > h1{
+    margin: 15px;
+    font-weight: bolder;
+}
+.ConteudoEvents{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow-y: scroll;
+}
+@media screen and (min-width: 600px) {
+    .ConteudoEvents{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .jornalMenu{
+        flex-direction: column !important;
+    }
+}
+h2 {
+    font-size: 40px;
+}
+* {box-sizing:border-box}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+    color: #F2F2F2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #F2F2F2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.container-banner{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.container {
+    grid-row: 2;
+    grid-column: 2;
+}
+.foto_a {
+    width: 300px;
+    height: 300px;
+}
+.foto_a > a > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
 }
 
+.artista {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(187, 136, 43);
+    gap: 10px;
+}
+
+.artista_i > img {
+    height: 300px;
+    width: 300px;
+    grid-row: 1;
+    border: black 3px solid;
+    border-radius: 20px;
+}
+
+.artista_t {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    margin: 0px 250px;
+    font-size: 20px;
+}
+
+.artista_t_t {
+    text-align: justify;
+}
