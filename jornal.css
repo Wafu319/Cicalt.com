@@ -192,8 +192,9 @@ nav > a:hover {
         width: 100%;
         justify-self: center;
         align-self: center;
-        display: none;
     }
+
+
     .events {
         display: flex;
         align-content: center;
@@ -295,11 +296,6 @@ h2 {
 max-width: 1000px;
 position: relative;
 margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-display: none;
 }
 
 /* Next & previous buttons */

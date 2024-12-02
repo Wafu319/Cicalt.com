@@ -4,9 +4,11 @@
         grid-template-columns: 1fr;
     }
 }
+
 ::-webkit-scrollbar {
     width: 0px;
 }
+
 body {
     margin: 0;
     display: grid;
@@ -16,9 +18,11 @@ body {
     font-family: 'Josefin Sans';
     background-color: rgb(187, 136, 43);
 }
+
 h1 {
     margin: 0;
 }
+
 header {
     background-color: #EEAD2D;
     height: 100%;
@@ -28,7 +32,8 @@ header {
     justify-items: center;
     align-items: center;
 }
-header > div {
+
+header>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +41,7 @@ header > div {
     width: 40%;
     grid-column: 2.5;
 }
+
 .logo {
     font-weight: bolder;
     color: #F2EFE9;
@@ -43,17 +49,21 @@ header > div {
     font-family: 'Josefin Sans';
     font-size: 65px;
 }
+
 .wario {
     grid-column: 2;
     grid-row: 1;
 }
-.logo > a{
+
+.logo>a {
     text-decoration: none;
     color: #F2EFE9;
 }
-.logo > a:link{
+
+.logo>a:link {
     color: #F2EFE9;
 }
+
 .logo2 {
     font-weight: 900;
     font-size: 100%;
@@ -63,11 +73,13 @@ header > div {
     display: flex;
     flex-direction: column;
 }
-.logo2 > a {
+
+.logo2>a {
     color: white;
     text-decoration: none;
     padding: 1%;
 }
+
 nav {
     background-color: #000000;
     height: 5vh;
@@ -79,7 +91,8 @@ nav {
     font-size: 100%;
     letter-spacing: 1px;
 }
-nav > a {
+
+nav>a {
     margin: 0 10px;
     font-weight: bold;
     color: white;
@@ -88,31 +101,38 @@ nav > a {
     transition: background-color .2s ease-in;
     border-radius: 0px 0px 20px 20px;
 }
+
 main {
-    background-color: white;
+    background-color: rgb(187, 136, 43);
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .painel {
     background-color: transparent;
     border: 0px;
     width: 100px;
     height: 70%;
 }
-.painel > i {
+
+.painel>i {
     font-size: 50px;
-    color:#F2EFE9;
+    color: #F2EFE9;
 }
-.painel > i:hover, .logo2 > a:hover{
+
+.painel>i:hover,
+.logo2>a:hover {
     color: #E57C4A;
 }
-nav > a:hover {
+
+nav>a:hover {
     background-color: #EEAD2D;
     border-radius: 0px 0px 20px 20px;
 }
-.jornalMenu{
+
+.jornalMenu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -127,7 +147,8 @@ nav > a:hover {
     background-position: center;
     background-size: cover;
 }
-.textpoto{
+
+.textpoto {
     align-self: center;
     justify-content: center;
     text-align: center;
@@ -135,40 +156,47 @@ nav > a:hover {
     overflow-y: scroll;
     height: 80%;
 }
+
 @media screen and (max-width: 600px) {
-    .jornalMenu{
+    .jornalMenu {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
 }
-@media screen and (max-width: 600px){
-    .photo{
+
+@media screen and (max-width: 600px) {
+    .photo {
         grid-column: span 3;
         margin: 0;
     }
 }
-.photo{
+
+.photo {
     display: flex;
     justify-content: center;
     height: 100%;
     align-items: center;
 }
-.photo > img{
+
+.photo>img {
     width: 100%;
     height: 740;
 }
+
 @media screen and (max-width: 600px) {
-    .photo > img {
+    .photo>img {
         width: 350px;
         height: 200px;
     }
 }
+
 @media screen and (max-width: 600px) {
-    a > img {
+    a>img {
         width: 300px;
         height: 150px;
         grid-column: span 2;
     }
+
     .slideshow-container {
         grid-row: 3;
         height: 100%;
@@ -177,60 +205,72 @@ nav > a:hover {
         align-self: center;
         display: none;
     }
+
     .events {
         display: flex;
         align-content: center;
     }
-    .mySlides > img {
+
+    .mySlides>img {
         height: 140px;
         width: 300px;
         align-self: center;
     }
+
     .events {
         margin: 0;
     }
 }
+
 @media screen and (max-width: 600px) {
     .titleEvents {
         width: 300px;
         height: 200px;
     }
 }
+
 .mySlides {
     height: 100%;
     width: 100%;
 }
+
 .textpoto {
     width: 100%;
     height: 100%;
 }
-.textpoto > h2{
-        text-align: left;
-        justify-self: center;
-        text-wrap: wrap;
-        min-width: fit-content;
-        width: min-content;
+
+.textpoto>h2 {
+    text-align: left;
+    justify-self: center;
+    text-wrap: wrap;
+    min-width: fit-content;
+    width: min-content;
 }
-.textpoto > p{
+
+.textpoto>p {
     text-wrap: wrap;
     text-align: left;
     margin: 10px;
     word-wrap: break-word;
     justify-content: center;
 }
-.events{
+
+.events {
     justify-content: center;
     text-align: center;
     align-content: center;
 }
+
 .titleEvents {
     height: 100%;
     align-content: center;
 }
-.contentEvents{
+
+.contentEvents {
     min-width: fit-content;
 }
-.pastEvents{
+
+.pastEvents {
     grid-column: span 3;
     display: grid;
     text-align: center;
@@ -238,41 +278,53 @@ nav > a:hover {
     max-height: fit-content;
     height: 350px;
 }
-.pastEvents > h1{
+
+.pastEvents>h1 {
     margin: 15px;
     font-weight: bolder;
 }
-.ConteudoEvents{
+
+.ConteudoEvents {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     overflow-y: scroll;
 }
+
 @media screen and (min-width: 600px) {
-    .ConteudoEvents{
+    .ConteudoEvents {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-    .jornalMenu{
+
+    .jornalMenu {
         flex-direction: column !important;
     }
 }
+
 h2 {
     font-size: 40px;
 }
-* {box-sizing:border-box}
+
+* {
+    box-sizing: border-box
+}
+
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
 }
+
 /* Hide the images by default */
 .mySlides {
     display: none;
 }
+
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -286,15 +338,19 @@ h2 {
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
+
 /* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
+
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
 /* Caption text */
 .text {
     color: #F2F2F2;
@@ -305,6 +361,7 @@ h2 {
     width: 100%;
     text-align: center;
 }
+
 /* Number text (1/3 etc) */
 .numbertext {
     color: #F2F2F2;
@@ -313,6 +370,7 @@ h2 {
     position: absolute;
     top: 0;
 }
+
 /* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
@@ -324,32 +382,45 @@ h2 {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
+
+.active,
+.dot:hover {
     background-color: #717171;
 }
+
 /* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
-.container-banner{
+
+.container-banner {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
+
 .container {
     grid-row: 2;
     grid-column: 2;
 }
+
 .foto_a {
     width: 300px;
     height: 300px;
 }
-.foto_a > a > img {
+
+.foto_a>a>img {
     width: 300px;
     height: 300px;
     border-radius: 20px;
@@ -360,9 +431,16 @@ h2 {
     flex-direction: column;
     background-color: rgb(187, 136, 43);
     gap: 10px;
+    padding: 10px;
 }
 
-.artista_i > img {
+
+.artista_i {
+    display: flex;
+    gap: 60px;
+}
+
+.artista_i>img {
     height: 300px;
     width: 300px;
     grid-row: 1;
@@ -381,6 +459,125 @@ h2 {
     font-size: 20px;
 }
 
-.artista_t_t {
+.artist _t_t {
+
     text-align: justify;
+}
+
+.foto_b {
+    grid-column: span 3;
+    text-align: center;
+    color: white;
+    font-family: "Oswald";
+    font-size: 50px;
+}
+
+.foto_b>a {
+    text-decoration: none;
+    color: white;
+}
+
+.foto_b>a:focus {
+    color: wheat;
+}
+
+.programacao {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .3fr 4fr 1fr 1fr 1fr 1fr;
+    height: 80vh;
+    width: 100vw;
+    justify-content: center;
+    text-align: justify;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.bloc {
+    display: grid;
+    grid-template-rows: .5fr;
+    border: black 1px solid;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    margin: 7px;
+    padding: 10px;
+}
+
+.linkf {
+    text-decoration: none;
+    color: #000000;
+}
+
+.artista_h {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    height: 110vh;
+    width: 100vh;
+    gap: 40px;
+    background-color: rgb(211, 177, 114);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#artista_h_2 {
+    width: 80%;
+    height: 80%;
+    background-color: red;
+    margin: auto;
+}
+
+#artista_h_3 > img{
+    width: 206px;
+    height: 206px;
+    border: solid black;
+}
+#artista_h_1 {
+    width: 90%;
+    height: 100%;
+    grid-column: span 2;
+    grid-row: 2;
+    text-align: justify;
+    margin: 0px 47px;
+}
+
+#artista_h_3 {
+    width: 100%;
+    height: 100%;
+    grid-row: 3;
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#artista_h1 {
+    width: 100%;
+    height: 50%;
+    grid-row: 1;
+    grid-column: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 80px 10px 0 0;
+}
+
+#artista_h_2 > img{
+    width: 100%;
+    height: 118%;
+    border: solid black;
+}
+
+#artista_h1 > h1 {
+    margin-right: 60px;
 }
